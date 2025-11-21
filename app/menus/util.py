@@ -6,11 +6,7 @@ import textwrap
 def clear_screen():
     print("Clearing screen...")
     os.system('cls' if os.name == 'nt' else 'clear')
-    ascii_art = r"""
-𝔹𝕦𝕣𝕦𝕙 𝕂𝕦𝕝𝕚𝕥
-"""
-
-    print(ascii_art)
+    print("𝔹𝕦𝕣𝕦𝕙 𝕂𝕦𝕝𝕚𝕥".center(WIDTH))
 
 def pause():
     input("\nPress enter to continue...")
