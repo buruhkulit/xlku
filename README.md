@@ -35,6 +35,25 @@ bash setup.sh
 python main.py
 ```
 
+# How to get environtment Variables
+Menambahkan Environment Variables:
+1. Buka https://rentry.co/me-sunset & copy
+2. Bikin file .env di dalam folder me-cli-sunset dengan isi text yang sudah di-copy tadi
+
+jalankan
+```
+nano .env
+```
+paste
+ctrl+x
+y
+enter
+
+Run the script
+```
+python main.py
+```
+
 # Info
 
 ## PS for Certain Indonesian mobile internet service provider
