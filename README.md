@@ -1,4 +1,4 @@
-# MYnyak Engsel Sunset
+# Buruh Kulit
 
 ![banner](bnr.png)
 
@@ -20,11 +20,11 @@ pkg install git -y
 ```
 3. Clone this repo
 ```
-git clone https://github.com/purplemashu/me-cli-sunset
+git clone https://github.com/buruhkulit/xlku
 ```
 4. Open the folder
 ```
-cd me-cli-sunset
+cd xlku
 ```
 5. Setup
 ```
