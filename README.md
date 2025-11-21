@@ -1,4 +1,6 @@
-<h1 align="center"><u>![banner](bnr.png)</u></h1>
+<p align="center">
+    <img src="https://github.com/buruhkulit/xlku/blob/main/bnr.png?sanitize=true"
+        height="300" width="300">
 
 <h1 align="center"><u> Buruh Kulit</u></h1>
 CLI client for a certain Indonesian mobile internet service provider.
