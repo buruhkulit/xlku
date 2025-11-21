@@ -1,7 +1,7 @@
-# Buruh Kulit
-
+<p align="center">
 ![banner](bnr.png)
 
+<h1 align="center"><u> Buruh Kulit</u></h1>
 CLI client for a certain Indonesian mobile internet service provider.
 
 # How to get environtment Variables
