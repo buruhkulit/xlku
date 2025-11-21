@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ```
 nano .env
 ```
-10. Buka https://rentry.co/xlku & copy
+10. Buka https://rentry.co/xlku & copy & paste
 11. ctrl+x
 12. y
 13. enter
