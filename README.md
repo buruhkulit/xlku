@@ -42,16 +42,16 @@ pip install -r requirements.txt
 
 # Menambahkan Environment Variables
 
-Buat file baru
+9. Buat file baru
 ```
 nano .env
 ```
-1. Buka https://rentry.co/xlku & copy
-2. ctrl+x
-3. y
-4. enter
+10. Buka https://rentry.co/xlku & copy
+11. ctrl+x
+12. y
+13. enter
 
-Menjalankan
+14. Menjalankan
 ```
 python main.py
 ```
