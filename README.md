@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/buruhkulit/xlku/blob/main/bnr.png?sanitize=true"
-        height="100" width="100">
+        height="200" width="200">
     
 <h1 align="center"><u> KUMPULAN PAKET XL</u></h1>
 
