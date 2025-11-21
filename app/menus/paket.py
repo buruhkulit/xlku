@@ -11,7 +11,7 @@ from app.type_dict import PaymentItem
 
 WIDTH = 55
 
-def show_hot_menu():
+def show_paket_menu1():
     api_key = AuthInstance.api_key
     tokens = AuthInstance.get_active_tokens()
     
@@ -70,7 +70,7 @@ def show_hot_menu():
             pause()
             continue
 
-def show_hot_menu2():
+def show_paket_menu2():
     api_key = AuthInstance.api_key
     tokens = AuthInstance.get_active_tokens()
     
