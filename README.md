@@ -1,5 +1,5 @@
-<p align="center">
-![banner](bnr.png)
+
+![banner](bnr.png).center(WIDTH)
 
 <h1 align="center"><u> Buruh Kulit</u></h1>
 CLI client for a certain Indonesian mobile internet service provider.
