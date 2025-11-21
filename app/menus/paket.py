@@ -19,12 +19,12 @@ def show_hot_menu():
     while in_bookmark_menu:
         clear_screen()
         print("=" * WIDTH)
-        print("🔥 Paket  Hot 🔥".center(WIDTH))
+        print("PAKET 1".center(WIDTH))
         print("=" * WIDTH)
         
         hot_packages = []
         
-        with open("hot_data/hot.json", "r", encoding="utf-8") as f:
+        with open("paket_data/paket1.json", "r", encoding="utf-8") as f:
             hot_packages = json.load(f)
 
         for idx, p in enumerate(hot_packages):
@@ -79,12 +79,12 @@ def show_hot_menu2():
         clear_screen()
         main_package_detail = {}
         print("=" * WIDTH)
-        print("🔥 Paket  Hot 2 🔥".center(WIDTH))
+        print("PAKET 2".center(WIDTH))
         print("=" * WIDTH)
         
         hot_packages = []
         
-        with open("hot_data/hot2.json", "r", encoding="utf-8") as f:
+        with open("paket_data/paket2.json", "r", encoding="utf-8") as f:
             hot_packages = json.load(f)
 
         for idx, p in enumerate(hot_packages):
