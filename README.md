@@ -1,6 +1,6 @@
 # Buruh Kulit
 
-![banner](bnr.png)
+![banner](bnr3.png)
 
 CLI client for a certain Indonesian mobile internet service provider.
 
