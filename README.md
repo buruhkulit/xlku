@@ -9,11 +9,11 @@
 # Cara menjalankan dengan TERMUX
 1. Update & Upgrade Termux
 ```
-apt update && apt full-upgrade
+apt update && apt full-upgrade -y
 ```
 2. Install Git
 ```
-pkg install git
+pkg install git -y
 ```
 3. Install Python
 ```
@@ -42,10 +42,6 @@ pip install -r requirements.txt
 
 # Menambahkan Environment Variables
 
-Open the folder
-```
-cd xlku
-```
 Buat file baru
 ```
 nano .env
