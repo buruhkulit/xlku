@@ -16,7 +16,7 @@ from app.service.auth import AuthInstance
 from app.menus.bookmark import show_bookmark_menu
 from app.menus.account import show_account_menu
 from app.menus.package import fetch_my_packages, get_packages_by_family, show_package_details
-from app.menus.hot import show_hot_menu, show_hot_menu2
+from app.menus.paket import show_paket_menu1, show_paket_menu2
 from app.service.sentry import enter_sentry_mode
 from app.menus.purchase import purchase_by_family
 from app.menus.famplan import show_family_info
@@ -105,9 +105,9 @@ def main():
                 fetch_my_packages()
                 continue
             elif choice == "3":
-                show_hot_menu()
+                show_paket_menu1()
             elif choice == "4":
-                show_hot_menu2()
+                show_paket_menu2()
             elif choice == "5":
                 option_code = input("Enter option code (or '99' to cancel): ")
                 if option_code == "99":
