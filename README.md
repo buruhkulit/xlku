@@ -56,6 +56,18 @@ nano .env
 python main.py
 ```
 
+# Cara Update Repo
+
+1. Open the folder
+```
+cd xlku
+```
+7. Update
+```
+git pull --rebase
+```
+
+
 ### [+] Description
 REPO INI DIBUAT UNTUK PEMBELIAN PAKET XL.
 
