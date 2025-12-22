@@ -3,18 +3,24 @@
         "family_name": "Xtra Combo Plus 30K",
         "family_code": "23b71540-8785-4abe-816d-e9b4efa48f95",
         "is_enterprise": false,
+        "variant_name": "XCP",
+        "option_name": "WA 50MB",
         "order": 32
     },
     {
         "family_name": "Add On XCP 10GB",
         "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
         "is_enterprise": false,
+        "variant_name": "Add On",
+        "option_name": "10GB",        
         "order": 4
     },    
     {
         "family_name": "Add On XCP 15GB",
         "family_code": "45c3a622-8c06-4bb1-8e56-bba1f3434600",
         "is_enterprise": false,
+        "variant_name": "Add On",
+        "option_name": "15GB",
         "order": 4
     },        
     {
