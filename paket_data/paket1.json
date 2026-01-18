@@ -1,5 +1,13 @@
 [
     {
+        "family_name": "PRIO Booster",
+        "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
+        "is_enterprise": false,
+        "variant_name": "PRIO Booster",
+        "option_name": "Extra Quota 10GB",
+        "order": 1
+    },
+    {
         "family_name": "Xtra Combo Plus",
         "family_code": "23b71540-8785-4abe-816d-e9b4efa48f95",
         "is_enterprise": false,
