@@ -1,5 +1,13 @@
 [
     {
+        "family_name": "Masa Aktif",
+        "family_code": "f4fd69c7-12a4-4047-a1f2-f4072a7c543e",
+        "is_enterprise": false,
+        "variant_name": "Akrab",
+        "option_name": "49.5GB for 3 Members",
+        "order": 19
+    },    
+    {
         "family_name": "PRIO Booster",
         "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
         "is_enterprise": false,
