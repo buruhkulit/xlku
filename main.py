@@ -28,36 +28,65 @@ from app.menus.store.redemables import show_redeemables_menu
 from app.client.registration import dukcapil
 
 WIDTH = 55
-
 def show_main_menu(profile):
     clear_screen()
-    print("=" * WIDTH)
+    # Warna ANSI sederhana
+    BOLD = "\033[1m"
+    RESET = "\033[0m"
+    
     expired_at_dt = datetime.fromtimestamp(profile["balance_expired_at"]).strftime("%Y-%m-%d")
-    print(f"Nomor: {profile['number']} | Type: {profile['subscription_type']}".center(WIDTH))
-    print(f"Pulsa: Rp {profile['balance']} | Aktif sampai: {expired_at_dt}".center(WIDTH))
-    print(f"{profile['point_info']}".center(WIDTH))
-    print("=" * WIDTH)
-    print("Menu:")
-    print("1. Login/Ganti akun")
-    print("2. Lihat Paket Saya")
-    print("3. Beli Paket 1")
-    print("4. Beli Paket 2")
-    print("5. Beli Paket Berdasarkan Option Code")
-    print("6. Beli Paket Berdasarkan Family Code")
-    print("7. Beli Semua Paket di Family Code (loop)")
-    print("8. Riwayat Transaksi")
-    print("9. Family Plan/Akrab Organizer")
-    print("10. Circle")
-    print("11. Store Segments")
-    print("12. Store Family List")
-    print("13. Store Packages")
-    print("14. Redemables")
-    print("R. Register")
-    print("N. Notifikasi")
-    print("V. Validate msisdn")
-    print("00. Bookmark Paket")
-    print("99. Tutup aplikasi")
-    print("-------------------------------------------------------")
+    
+    # --- HEADER DASHBOARD ---
+    print(f"{BOLD}{' DASHBOARD AKUN '.center(WIDTH)}{RESET}")
+    print(f" ".center(WIDTH))
+    
+    # Mengelompokkan menu agar lebih rapi
+    header = [
+        (f" {BOLD}Nomor  :{RESET} {profile['number']} ({profile['subscription_type']})", f""),
+        (f" {BOLD}Pulsa  :{RESET} Rp {profile['balance']:,}", f""),
+        (f" {BOLD}Aktif  :{RESET} {expired_at_dt}", f""),
+        (f" {BOLD}Points :{RESET} {profile['point_info']}", f""),
+    ]
+    for h1, h2 in header:
+        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
+        print(f"  {h1.ljust(27)} {h2}")
+        
+    # --- MENU CATEGORIES ---
+    print(f" ".center(WIDTH))
+    print(f"\n{BOLD}{' MAIN MENU '.center(WIDTH)}{RESET}")
+    print(f" ".center(WIDTH))
+
+    # Mengelompokkan menu agar lebih rapi
+    menus = [
+        (f" {BOLD}1.{RESET} Login/Ganti Akun", f" {BOLD}8.{RESET} Riwayat Tx"),
+        (f" {BOLD}2.{RESET} Paket Saya", f" {BOLD}9.{RESET} Family Plan"),
+        (f" {BOLD}3.{RESET} Beli Paket 1", f"{BOLD}10.{RESET} Circle"),
+        (f" {BOLD}4.{RESET} Beli Paket 2", f"{BOLD}11.{RESET} Store Segments"),
+        (f" {BOLD}5.{RESET} Option Code", f"{BOLD}12.{RESET} Family List"),
+        (f" {BOLD}6.{RESET} Family Code", f"{BOLD}13.{RESET} Store Packages"),
+        (f" {BOLD}7.{RESET} Bulk Buy (Loop)", f"{BOLD}14.{RESET} Redeemables"),
+    ]
+    for m1, m2 in menus:
+        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
+        print(f"  {m1.ljust(31)} {m2}")
+        
+    print(f" ".center(WIDTH))
+    print(f"\n{BOLD}{' TOOLS & SYSTEM '.center(WIDTH)}{RESET}")
+    print(f" ".center(WIDTH))
+
+    # Mengelompokkan menu agar lebih rapi
+    tools = [
+        (f" {BOLD}N.{RESET} Notifikasi", f" {BOLD}00.{RESET} Bookmark"),
+        (f" {BOLD}R.{RESET} Register", f" {BOLD}99.{RESET} Tutup App"),
+        (f" {BOLD}V.{RESET} Validate MSISDN", f""),
+    ]
+    for t1, t2 in tools:
+        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
+        print(f"  {t1.ljust(31)} {t2}")
+
+    print(f" ".center(WIDTH))       
+
+
 
 show_menu = True
 def main():
@@ -77,7 +106,8 @@ def main():
                 tiering_data = get_tiering_info(AuthInstance.api_key, active_user["tokens"])
                 tier = tiering_data.get("tier", 0)
                 current_point = tiering_data.get("current_point", 0)
-                point_info = f"Points: {current_point} | Tier: {tier}"
+                point_info = f"{current_point} (Tier {tier})"
+                
             
             profile = {
                 "number": active_user["number"],
