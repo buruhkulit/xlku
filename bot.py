@@ -4,7 +4,7 @@ from git import Repo
 from telegram.ext import Updater, CommandHandler
 
 # ---- SETTING ----
-TOKEN = "7667348960:AAFRluFJp6Oy0vBY6DVWSWh1M6L4bE6cmRM"
+TOKEN = "8387883069:AAET_FivdHyZRwSVgJuva5Pzlq5NhN11W4I"
 WORKDIR = "https://github.com/buruhkulit/xlku"
 
 current_repo = None
