@@ -27,68 +27,53 @@ from app.menus.store.search import show_family_list_menu, show_store_packages_me
 from app.menus.store.redemables import show_redeemables_menu
 from app.client.registration import dukcapil
 
-WIDTH = 55
+from datetime import datetime
+
 def show_main_menu(profile):
     clear_screen()
-    # Warna ANSI sederhana
-    BOLD = "\033[1m"
-    RESET = "\033[0m"
-    
-    expired_at_dt = datetime.fromtimestamp(profile["balance_expired_at"]).strftime("%Y-%m-%d")
-    
-    # --- HEADER DASHBOARD ---
-    print(f"{BOLD}{' DASHBOARD AKUN '.center(WIDTH)}{RESET}")
-    print(f" ".center(WIDTH))
-    
-    # Mengelompokkan menu agar lebih rapi
-    header = [
-        (f" {BOLD}Nomor  :{RESET} {profile['number']} ({profile['subscription_type']})", f""),
-        (f" {BOLD}Pulsa  :{RESET} Rp {profile['balance']:,}", f""),
-        (f" {BOLD}Aktif  :{RESET} {expired_at_dt}", f""),
-        (f" {BOLD}Points :{RESET} {profile['point_info']}", f""),
-    ]
-    for h1, h2 in header:
-        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
-        print(f"  {h1.ljust(27)} {h2}")
-        
-    # --- MENU CATEGORIES ---
-    print(f" ".center(WIDTH))
-    print(f"\n{BOLD}{' MAIN MENU '.center(WIDTH)}{RESET}")
-    print(f" ".center(WIDTH))
+    BOLD, RESET = "\033[1m", "\033[0m"
+    WIDTH = 55
 
-    # Mengelompokkan menu agar lebih rapi
-    menus = [
+    # Helper untuk cetak header bagian
+    def print_section(title):
+        print(f"\n{BOLD}{title.center(WIDTH)}{RESET}")
+        print(" " * WIDTH) # Memberikan spasi kosong di bawah judul
+
+    # Helper untuk cetak menu dalam kolom
+    def print_grid(items, padding=31):
+        for left, right in items:
+            print(f"  {left.ljust(padding)} {right}")
+
+    # 1. Dashboard Info
+    expired = datetime.fromtimestamp(profile["balance_expired_at"]).strftime("%Y-%m-%d")
+    print_section("DASHBOARD AKUN")
+    print_grid([
+        (f" {BOLD}Nomor  :{RESET} {profile['number']} ({profile['subscription_type']})", ""),
+        (f" {BOLD}Pulsa  :{RESET} Rp {profile['balance']:,}", ""),
+        (f" {BOLD}Aktif  :{RESET} {expired}", ""),
+        (f" {BOLD}Points :{RESET} {profile['point_info']}", ""),
+    ], padding=27)
+
+    # 2. Main Menu
+    print_section("MAIN MENU")
+    print_grid([
         (f" {BOLD}1.{RESET} Login/Ganti Akun", f" {BOLD}8.{RESET} Riwayat Tx"),
-        (f" {BOLD}2.{RESET} Paket Saya", f" {BOLD}9.{RESET} Family Plan"),
-        (f" {BOLD}3.{RESET} Beli Paket 1", f"{BOLD}10.{RESET} Circle"),
-        (f" {BOLD}4.{RESET} Beli Paket 2", f"{BOLD}11.{RESET} Store Segments"),
-        (f" {BOLD}5.{RESET} Option Code", f"{BOLD}12.{RESET} Family List"),
-        (f" {BOLD}6.{RESET} Family Code", f"{BOLD}13.{RESET} Store Packages"),
-        (f" {BOLD}7.{RESET} Bulk Buy (Loop)", f"{BOLD}14.{RESET} Redeemables"),
-    ]
-    for m1, m2 in menus:
-        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
-        print(f"  {m1.ljust(31)} {m2}")
-        
-    print(f" ".center(WIDTH))
-    print(f"\n{BOLD}{' TOOLS & SYSTEM '.center(WIDTH)}{RESET}")
-    print(f" ".center(WIDTH))
+        (f" {BOLD}2.{RESET} Paket Saya",        f" {BOLD}9.{RESET} Family Plan"),
+        (f" {BOLD}3.{RESET} Beli Paket 1",      f"{BOLD}10.{RESET} Circle"),
+        (f" {BOLD}4.{RESET} Beli Paket 2",      f"{BOLD}11.{RESET} Store Segments"),
+        (f" {BOLD}5.{RESET} Option Code",       f"{BOLD}12.{RESET} Family List"),
+        (f" {BOLD}6.{RESET} Family Code",       f"{BOLD}13.{RESET} Store Packages"),
+        (f" {BOLD}7.{RESET} Bulk Buy (Loop)",   f"{BOLD}14.{RESET} Redeemables"),
+    ])
 
-    # Mengelompokkan menu agar lebih rapi
-    tools = [
-        (f" {BOLD}N.{RESET} Notifikasi", f" {BOLD}00.{RESET} Bookmark"),
-        (f" {BOLD}R.{RESET} Register", f" {BOLD}99.{RESET} Tutup App"),
-        (f" {BOLD}V.{RESET} Validate MSISDN", f""),
-    ]
-    for t1, t2 in tools:
-        # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
-        print(f"  {t1.ljust(31)} {t2}")
-
-    print(f" ".center(WIDTH))       
-
-
-
-show_menu = True
+    # 3. Tools & System
+    print_section("TOOLS & SYSTEM")
+    print_grid([
+        (f" {BOLD}N.{RESET} Notifikasi",      f" {BOLD}00.{RESET} Bookmark"),
+        (f" {BOLD}R.{RESET} Register",        f" {BOLD}99.{RESET} Tutup App"),
+        (f" {BOLD}V.{RESET} Validate MSISDN", ""),
+    ])
+    print("\n" + " " * WIDTH)
 def main():
     
     while True:
