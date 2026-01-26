@@ -9,6 +9,10 @@ from app.client.purchase.qris import show_qris_payment
 from app.client.purchase.balance import settlement_balance
 from app.type_dict import PaymentItem
 
+
+
+# Warna ANSI sederhana
+BOLD, RESET = "\033[1m", "\033[0m"
 WIDTH = 55
 
 def show_paket_menu1():
@@ -18,21 +22,27 @@ def show_paket_menu1():
     in_bookmark_menu = True
     while in_bookmark_menu:
         clear_screen()
-        print("=" * WIDTH)
-        print("PAKET 1".center(WIDTH))
-        print("=" * WIDTH)
-        
+        print(f"{BOLD}{' PAKET 1 '.center(WIDTH)}{RESET}")
+        print(f" ".center(WIDTH))
+
         hot_packages = []
         
         with open("paket_data/paket1.json", "r", encoding="utf-8") as f:
             hot_packages = json.load(f)
 
         for idx, p in enumerate(hot_packages):
-            print(f"{idx + 1}. {p['family_name']} - {p['variant_name']} - {p['option_name']}")
-            print("-" * WIDTH)
-        
-        print("00. Kembali ke menu utama")
-        print("-" * WIDTH)
+            # Mengelompokkan menu agar lebih rapi
+            paket = [
+                (f"{BOLD}{idx + 1}.{RESET} {p['family_name']}", f""),
+            ]
+            for p1, p2 in paket:
+                # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
+                print(f"  {p1.ljust(27)} {p2}")
+            
+        print(f" ".center(WIDTH))
+        print("  00. Kembali ke menu utama")
+        print(f" ".center(WIDTH))
+        print(f" ".center(WIDTH))
         choice = input("Pilih paket (nomor): ")
         if choice == "00":
             in_bookmark_menu = False
@@ -78,21 +88,27 @@ def show_paket_menu2():
     while in_bookmark_menu:
         clear_screen()
         main_package_detail = {}
-        print("=" * WIDTH)
-        print("PAKET 2".center(WIDTH))
-        print("=" * WIDTH)
-        
+        print(f"{BOLD}{' PAKET 2 '.center(WIDTH)}{RESET}")
+        print(f" ".center(WIDTH))
+
         hot_packages = []
         
         with open("paket_data/paket2.json", "r", encoding="utf-8") as f:
             hot_packages = json.load(f)
 
         for idx, p in enumerate(hot_packages):
-            print(f"{idx + 1}. {p['name']}\n   Harga: {p['price']}")
-            print("-" * WIDTH)
-        
-        print("00. Kembali ke menu utama")
-        print("-" * WIDTH)
+            # Mengelompokkan menu agar lebih rapi
+            harga = [
+                (f"{BOLD}{idx + 1}.{RESET} {p['name']}\n   Harga: {p['price']}", f""),
+            ]
+            for h1, h2 in harga:
+                # Gunakan ljust(35) atau sesuaikan dengan lebar kolom yang diinginkan
+                print(f"  {h1.ljust(27)} {h2}")
+            
+        print(f" ".center(WIDTH))
+        print("  00. Kembali ke menu utama")
+        print(f" ".center(WIDTH))
+        print(f" ".center(WIDTH))
         choice = input("Pilih paket (nomor): ")
         if choice == "00":
             in_bookmark_menu = False
@@ -137,13 +153,13 @@ def show_paket_menu2():
                 )
             
             clear_screen()
-            print("=" * WIDTH)
+            print(" " * WIDTH)
             print(f"Name: {selected_package['name']}")
             print(f"Price: {selected_package['price']}")
             print(f"Detail: {selected_package['detail']}")
-            print("=" * WIDTH)
+            print(" " * WIDTH)
             print("Main Package Details:".center(WIDTH))
-            print("-" * WIDTH)
+            print(" " * WIDTH)
             # Show package 0 details
             
             price = main_package_detail["package_option"]["price"]
@@ -170,15 +186,15 @@ def show_paket_menu2():
             print(f"Masa Aktif: {validity}")
             print(f"Point: {main_package_detail['package_option']['point']}")
             print(f"Plan Type: {main_package_detail['package_family']['plan_type']}")
-            print("-" * WIDTH)
+            print(" " * WIDTH)
             print(f"Family Code: {family_code}")
             print(f"Parent Code (for addon/dummy): {parent_code}")
-            print("-" * WIDTH)
+            print(" " * WIDTH)
             benefits = main_package_detail["package_option"]["benefits"]
             if benefits and isinstance(benefits, list):
                 print("Benefits:")
                 for benefit in benefits:
-                    print("-" * WIDTH)
+                    print(" " * WIDTH)
                     print(f" Name: {benefit['name']}")
                     print(f"  Item id: {benefit['item_id']}")
                     data_type = benefit['data_type']
@@ -197,11 +213,11 @@ def show_paket_menu2():
                     if benefit["is_unlimited"]:
                         print("  Unlimited: Yes")
 
-            print("-" * WIDTH)
+            print(" " * WIDTH)
             print(f"SnK MyXL:\n{detail}")
-            print("-" * WIDTH)
+            print(" " * WIDTH)
                 
-            print("=" * WIDTH)
+            print(" " * WIDTH)
             
             payment_for = selected_package.get("payment_for", "BUY_PACKAGE")
             ask_overwrite = selected_package.get("ask_overwrite", False)
