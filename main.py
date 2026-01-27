@@ -32,28 +32,30 @@ from datetime import datetime
 def show_main_menu(profile):
     clear_screen()
     BOLD, RESET = "\033[1m", "\033[0m"
-    WIDTH = 55
-
-    # Helper untuk cetak header bagian
+    WIDTH = 50
+    
     def print_section(title):
         print(f"\n{BOLD}{title.center(WIDTH)}{RESET}")
         print(" " * WIDTH) # Memberikan spasi kosong di bawah judul
 
-    # Helper untuk cetak menu dalam kolom
     def print_grid(items, padding=31):
         for left, right in items:
-            print(f"  {left.ljust(padding)} {right}")
+            print(f"  {left.ljust(padding)} {right}")
 
     # 1. Dashboard Info
     expired = datetime.fromtimestamp(profile["balance_expired_at"]).strftime("%Y-%m-%d")
     print_section("DASHBOARD AKUN")
-    print_grid([
-        (f" {BOLD}Nomor  :{RESET} {profile['number']} ({profile['subscription_type']})", ""),
-        (f" {BOLD}Pulsa  :{RESET} Rp {profile['balance']:,}", ""),
-        (f" {BOLD}Aktif  :{RESET} {expired}", ""),
-        (f" {BOLD}Points :{RESET} {profile['point_info']}", ""),
-    ], padding=27)
-
+    dashboard_data = [
+        ("Nomor", f"{profile['number']} ({profile['subscription_type']})"),
+        ("Pulsa", f"Rp {profile['balance']:,}"),
+        ("Aktif", expired),
+        ("Points", profile['point_info'])
+    ]
+    # Gunakan ljust yang lebih lebar (misal 11) agar titik dua sejajar
+    for label, value in dashboard_data:
+        # '  ' di awal disamakan dengan margin kiri print_grid
+        print(f"   {BOLD}{label.ljust(11)}:{RESET} {value}")
+        
     # 2. Main Menu
     print_section("MAIN MENU")
     print_grid([
