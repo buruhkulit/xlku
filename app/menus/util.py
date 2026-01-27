@@ -3,21 +3,20 @@ import os
 import re
 import textwrap
 
+import os
+
 def clear_screen():
-    print("Clearing screen...")
     os.system('cls' if os.name == 'nt' else 'clear')
+    
     ascii_art = r"""
-                                                   
-   ____                   _       _  __     _ _ _   
-  | __ ) _   _ _ __ _   _| |__   | |/ /   _| (_) |_ 
-  |  _ \| | | | '__| | | | '_ \  | ' / | | | | | __|
-  | |_) | |_| | |  | |_| | | | | | . \ |_| | | | |_ 
-  |____/ \__,_|_|   \__,_|_| |_| |_|\_\__,_|_|_|\__|
-                                                    
+   _  __                  ___               _    
+  | |/ /__ _ _  _ _ __   | _ )_  _ _ _ _  _| |_  
+  | ' </ _` | || | '  \  | _ \ || | '_| || | ' \ 
+  |_|\_\__,_|\_,_|_|_|_| |___/\_,_|_|  \_,_|_||_|
 """
 
     print(ascii_art)
-
+    
 def pause():
     input("\nPress enter to continue...")
 
