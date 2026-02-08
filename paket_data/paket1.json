@@ -6,7 +6,15 @@
         "variant_name": "Akrab",
         "option_name": "144GB for 3 Members",
         "order": 19
-    },    
+    }, 
+    {
+        "family_name": "PRIO 5G+ trial",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "is_enterprise": false,
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Ultra 5G+ Trial",
+        "order": 1
+    },
     {
         "family_name": "PRIO Booster",
         "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
