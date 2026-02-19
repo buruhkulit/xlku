@@ -8,12 +8,20 @@
         "order": 19
     }, 
     {
-        "family_name": "PRIO 5G+ trial",
+        "family_name": "PRIO 5G+ trial 1",
         "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
         "is_enterprise": false,
         "variant_name": "myPRIO X Unlimited",
         "option_name": "PRIO Ultra 5G+ Trial",
         "order": 1
+    },
+    {
+        "family_name": "PRIO 5G+ trial 2",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "is_enterprise": false,
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Ultra 5G+ Trial",
+        "order": 2
     },
     {
         "family_name": "PRIO Booster",
