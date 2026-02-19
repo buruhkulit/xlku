@@ -8,14 +8,6 @@
         "order": 19
     }, 
     {
-        "family_name": "Bonus Isi Pulsa",
-        "family_code": "3f4c0d03-c1b8-451b-a001-f3786f36351b",
-        "is_enterprise": false,
-        "variant_name": "Bonus For You",
-        "option_name": "",
-        "order": 
-    }, 
-    {
         "family_name": "PRIO 5G+ trial 1",
         "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
         "is_enterprise": false,
