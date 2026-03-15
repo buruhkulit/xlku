@@ -13,7 +13,7 @@
         "is_enterprise": false,
         "variant_name": "myPRIO X Unlimited",
         "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 1
+        "order": 11
     },
     {
         "family_name": "PRIO 5G+ trial 2",
@@ -21,7 +21,15 @@
         "is_enterprise": false,
         "variant_name": "myPRIO X Unlimited",
         "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 2
+        "order": 12
+    },
+    {
+        "family_name": "YouTube Quota jam 00-22",
+        "family_code": "1fe292a5-5fef-430e-917b-e0eaeeb89f93",
+        "is_enterprise": false,
+        "variant_name": "YouTube Quota Promo",
+        "option_name": "YouTube 500MB",
+        "order": 1
     },
     {
         "family_name": "PRIO Booster",
