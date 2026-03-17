@@ -1,11 +1,11 @@
 [
     {
-        "family_name": "Masa Aktif",
-        "family_code": "f4fd69c7-12a4-4047-a1f2-f4072a7c543e",
+        "family_name": "PRIO Trial 5GB",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c,
         "is_enterprise": false,
-        "variant_name": "Akrab",
-        "option_name": "144GB for 3 Members",
-        "order": 19
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Free Trial 5GB",
+        "order": 1
     }, 
     {
         "family_name": "PRIO 5G+ trial 1",
@@ -13,7 +13,7 @@
         "is_enterprise": false,
         "variant_name": "myPRIO X Unlimited",
         "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 11
+        "order": 22
     },
     {
         "family_name": "PRIO 5G+ trial 2",
@@ -21,7 +21,7 @@
         "is_enterprise": false,
         "variant_name": "myPRIO X Unlimited",
         "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 12
+        "order": 23
     },
     {
         "family_name": "YouTube Quota jam 00-22",
