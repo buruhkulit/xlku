@@ -48,6 +48,14 @@
         "order": 26
     },
     {
+        "family_name": "PRIO Booster 5GB",
+        "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
+        "is_enterprise": false,
+        "variant_name": "PRIO Booster",
+        "option_name": "Extra Quota",
+        "order": 2
+    },
+    {
         "family_name": "PRIO Trial 5GB - coid",
         "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
         "is_enterprise": false,
@@ -55,14 +63,6 @@
         "option_name": "PRIO Free Trial 5GB",
         "order": 1
     }, 
-    {
-        "family_name": "PRIO Booster - coid",
-        "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
-        "is_enterprise": false,
-        "variant_name": "PRIO Booster",
-        "option_name": "Extra Quota 10GB",
-        "order": 1
-    },
     {
         "family_name": "Xtra Combo Plus",
         "family_code": "23b71540-8785-4abe-816d-e9b4efa48f95",
