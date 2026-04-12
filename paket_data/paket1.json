@@ -1,30 +1,30 @@
 [
     {
-        "family_name": "PRIO Trial 5GB",
-        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "family_name": "Ritual Mastif 1",
+        "family_code": "fff99b6b-5a5d-4ba4-a55b-38f6aca6f91d",
         "is_enterprise": false,
-        "variant_name": "myPRIO X Unlimited",
-        "option_name": "PRIO Free Trial 5GB",
+        "variant_name": "XL PASS",
+        "option_name": "XL PASS 20 days",
         "order": 1
     }, 
     {
-        "family_name": "PRIO 5G+ trial 1",
-        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "family_name": "Ritual Mastif 2",
+        "family_code": "b0a20d74-0c54-4e3b-8f3f-01e7482e50bf",
         "is_enterprise": false,
-        "variant_name": "myPRIO X Unlimited",
-        "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 22
-    },
+        "variant_name": "XL PASS",
+        "option_name": "XL PASS 20 days",
+        "order": 1
+    }, 
     {
-        "family_name": "PRIO 5G+ trial 2",
-        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "family_name": "Ritual Mastif 3",
+        "family_code": "7fed7aa1-946f-44ce-9eb4-488a7e15c68a",
         "is_enterprise": false,
-        "variant_name": "myPRIO X Unlimited",
-        "option_name": "PRIO Ultra 5G+ Trial",
-        "order": 23
-    },
+        "variant_name": "XL PASS LITE",
+        "option_name": "XL PASS LITE",
+        "order": 1
+    }, 
     {
-        "family_name": "YouTube Quota jam 00-22",
+        "family_name": "YouTube Quota jam 00-22 + Mastif",
         "family_code": "1fe292a5-5fef-430e-917b-e0eaeeb89f93",
         "is_enterprise": false,
         "variant_name": "YouTube Quota Promo",
@@ -32,7 +32,31 @@
         "order": 1
     },
     {
-        "family_name": "PRIO Booster",
+        "family_name": "PRIO 5G+ trial 1",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "is_enterprise": false,
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Ultra 5G+ Trial",
+        "order": 25
+    },
+    {
+        "family_name": "PRIO 5G+ trial 2",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "is_enterprise": false,
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Ultra 5G+ Trial",
+        "order": 26
+    },
+    {
+        "family_name": "PRIO Trial 5GB - coid",
+        "family_code": "162d261b-05c7-450c-9b7a-1873b160140c",
+        "is_enterprise": false,
+        "variant_name": "myPRIO X Unlimited",
+        "option_name": "PRIO Free Trial 5GB",
+        "order": 1
+    }, 
+    {
+        "family_name": "PRIO Booster - coid",
         "family_code": "23ddccc0-ac04-4e80-a939-5f5d76f4bc64",
         "is_enterprise": false,
         "variant_name": "PRIO Booster",
