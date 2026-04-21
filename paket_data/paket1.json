@@ -1,6 +1,6 @@
 [
     {
-        "family_name": "Ritual Mastif 1",
+        "family_name": "XL PASS 1",
         "family_code": "fff99b6b-5a5d-4ba4-a55b-38f6aca6f91d",
         "is_enterprise": false,
         "variant_name": "XL PASS",
@@ -8,7 +8,7 @@
         "order": 1
     }, 
     {
-        "family_name": "Ritual Mastif 2",
+        "family_name": "XL PASS 2",
         "family_code": "b0a20d74-0c54-4e3b-8f3f-01e7482e50bf",
         "is_enterprise": false,
         "variant_name": "XL PASS",
@@ -16,7 +16,7 @@
         "order": 1
     }, 
     {
-        "family_name": "Ritual Mastif 3",
+        "family_name": "XL PASS 3",
         "family_code": "7fed7aa1-946f-44ce-9eb4-488a7e15c68a",
         "is_enterprise": false,
         "variant_name": "XL PASS LITE",
