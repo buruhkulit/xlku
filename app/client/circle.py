@@ -186,7 +186,7 @@ def get_bonus_data(
     parent_subs_id: str,
     family_id: str,
 ) -> dict:
-    path = "store/api/v8/segments/family-hub"
+    path = "store/api/v8/segments/family-hub/bonus/list"
 
     raw_payload = {
         "is_enterprise": False,
