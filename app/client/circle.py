@@ -198,3 +198,23 @@ def get_bonus_data(
     res = send_api_request(api_key, path, raw_payload, tokens["id_token"], "POST")
 
     return res
+
+def get_circle_oc(
+    api_key: str,
+    tokens: dict,
+    parent_subs_id: str,
+    family_id: str,
+) -> dict:
+    path = "store/api/v8/segments/family-hub"
+
+    raw_payload = {
+        "is_enterprise": False,
+        "parent_subs_id": parent_subs_id,
+        "family_id": family_id,
+        "lang": "en"
+    }
+
+    res = send_api_request(api_key, path, raw_payload, tokens["id_token"], "POST")
+
+    return res
+
