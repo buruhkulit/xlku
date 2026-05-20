@@ -1,10 +1,10 @@
 {
-  "family_name": "XL PASS LITE",
-  "family_code": "7fed7aa1-946f-44ce-9eb4-488a7e15c68a",
+  "family_name": "XL PASS",
+  "family_code": "fff99b6b-5a5d-4ba4-a55b-38f6aca6f91d",
   "is_enterprise": false,
   "migration_type": "NONE",
-  "variant_code": "c7fef91f-c5fa-4a0d-8762-0f514837d276",
-  "option_name": "XL PASS LITE",
+  "variant_code": "6986897d-9f09-4651-ac24-6efdf3dbcf3d",
+  "option_name": "XL PASS 20 Days",
   "order": 1,
-  "price": 138000
+  "price": 800000
 }
